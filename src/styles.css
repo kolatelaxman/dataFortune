@@ -1,0 +1,93 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --light-blue: #2988b5;
+  --dark-blue: #1b5875;
+  --light-grey: #dedede;
+  --dark-grey: #aaaaaa;
+  --text-color: #555555;
+  --validation-dark-red: #a93a44;
+  --validation-light-red: #ffe8ea;
+  --bg-color: #e6e6e6;
+  --box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  --header-bg: #ffffff;
+  --input-border: #cccccc;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.card {
+  background: white;
+  border-radius: 4px;
+  padding: 30px;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid #dcdcdc;
+}
+
+.page-title-bar {
+  background-color: var(--light-blue);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1.2rem;
+}
+
+.btn-primary {
+  background-color: var(--dark-blue);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--light-blue);
+}
+
+.btn-primary[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+input[type="text"], input[type="password"], input[type="email"], select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 1px solid var(--input-border);
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+input.ng-invalid.ng-touched, select.ng-invalid.ng-touched {
+  border-color: var(--validation-dark-red);
+  background-color: var(--validation-light-red);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.required-asterisk {
+  color: var(--validation-dark-red);
+  margin-left: 2px;
+}
